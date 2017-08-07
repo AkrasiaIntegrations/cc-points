@@ -24,7 +24,6 @@ var akrasiaCallback = function(session, result) {
 };
 
 app.post("/fetch", function(req, res) {
-  console.log('Fetch called.');
   // Get the session and user options from Akrasia's request
   var callbackSession = req.body.session;
   var userOptions = req.body.user_options;
