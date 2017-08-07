@@ -40,7 +40,6 @@ app.post("/fetch", function(req, res) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(body);
       var elem = $('article div.grid-row.profile-time h3').eq(0);
-      console.log(elem.text());
       var solvedProblemsCount = parseInt(elem.text());
       
       // Create the datapoint with value (and optional comment)
